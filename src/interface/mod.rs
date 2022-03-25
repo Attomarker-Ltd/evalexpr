@@ -10,7 +10,7 @@ use crate::{
 /// ```rust
 /// use evalexpr::*;
 ///
-/// assert_eq!(eval("1 + 2 + 3"), Ok(Value::from(6)));
+/// assert_eq!(eval("1 + 2 + 3"), Ok(Value::from(6.0)));
 /// ```
 ///
 /// *See the [crate doc](index.html) for more examples and explanations of the expression format.*

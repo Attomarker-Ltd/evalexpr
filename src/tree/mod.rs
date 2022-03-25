@@ -30,7 +30,7 @@ mod iter;
 /// let mut context = HashMapContext::new();
 /// context.set_value("alpha".into(), 2.into()).unwrap(); // Do proper error handling here
 /// let node = build_operator_tree("1 + alpha").unwrap(); // Do proper error handling here
-/// assert_eq!(node.eval_with_context(&context), Ok(Value::from(3)));
+/// assert_eq!(node.eval_with_context(&context), Ok(Value::from(3.0)));
 /// ```
 ///
 #[derive(Debug, PartialEq, Clone)]
