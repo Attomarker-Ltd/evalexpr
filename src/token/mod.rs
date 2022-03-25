@@ -349,7 +349,7 @@ fn partial_tokens_to_tokens(mut tokens: &[PartialToken]) -> EvalexprResult<Vec<T
                 PartialToken::Literal(literal) => {
                     cutoff = 1;
                     if let Ok(number) = literal.parse::<IntType>() {
-                        Some(Token::Int(number))
+                        Some(Token::Float(number as f64)) // we want all int literals to be read as floats
                     } else if let Ok(number) = literal.parse::<FloatType>() {
                         Some(Token::Float(number))
                     } else if let Ok(boolean) = literal.parse::<bool>() {
