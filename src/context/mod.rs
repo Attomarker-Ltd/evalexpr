@@ -73,7 +73,7 @@ impl Context for EmptyContext {
 #[derive(Clone, Debug, Default)]
 #[cfg_attr(feature = "serde_support", derive(Serialize, Deserialize))]
 pub struct HashMapContext {
-    variables: HashMap<String, Value>,
+    pub variables: HashMap<String, Value>,
     #[cfg_attr(feature = "serde_support", serde(skip))]
     functions: HashMap<String, Function>,
 }
